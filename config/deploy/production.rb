@@ -47,10 +47,10 @@ server 'localhost', user: 'deploy', roles: %w{app db web}
 #    auth_methods: %w(password)
 #  }
 
-ssh_options: {
-keys: %w("/home/deploy/.aws/letsbuild-euw1.pem"),
-forward_agent: true,
-auth_methods: %w(publickey)
+set :ssh_options, {
+    keys: %w("/home/deploy/.aws/letsbuild-euw1.pem"),
+    forward_agent: true,
+    auth_methods: %w(publickey)
 }
 #
 # The server-based syntax can be used to override options:
